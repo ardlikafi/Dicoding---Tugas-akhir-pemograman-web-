@@ -1,0 +1,245 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f0f0f0;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+    background: #2C3E50; /* Dark Blue Header */
+    color: white;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1{
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+    color: #E67E22; /* Orange Hover */
+}
+
+/* Dropdown Styling */
+header nav ul li.dropdown > a::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    margin-left: 5px;
+}
+
+header nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #34495E; /* Dark Blue Dropdown */
+  padding: 0;
+  min-width: 200px;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul li:hover > ul {
+  display: block;
+}
+
+header nav ul li ul li{
+  margin: 0;
+}
+
+header nav ul li ul li a {
+    padding: 8px 10px;
+    display: block;
+}
+
+header nav ul li ul li a:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #E67E22; /* Orange Hover */
+}
+
+
+main {
+    display: flex;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+article {
+    flex: 3;
+    padding-right: 30px;
+}
+
+article section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+article section:nth-child(odd) {
+    background: #F5F5F5; /* Light Gray Section */
+}
+
+aside {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+aside ul li a:hover{
+    color: #007bff;
+}
+
+footer {
+    background: #2C3E50; /* Dark Blue Footer */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .container p {
+  margin: 0;
+}
+
+.portfolio-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #F5F5F5; /* Light Gray Portfolio Item */
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    article {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    header nav ul li ul{
+      position: relative;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+
+    footer .container p {
+        margin-bottom: 5px;
+    }
+}
